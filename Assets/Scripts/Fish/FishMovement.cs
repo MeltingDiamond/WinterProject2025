@@ -11,14 +11,35 @@ public class FishMovement : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _startPosition = transform.position.y;
+        if (transform.localScale.x == 1f)
+        {
+            swimSpeed = -swimSpeed;
+        }
     }
 
     void Update()
     {
         if (!_hooked)
         {
-            _rigidbody2D.linearVelocity = new Vector2(swimSpeed, 0);
-            _rigidbody2D.position = new Vector2(_rigidbody2D.position.x, _startPosition);
+            
+            if (_rigidbody2D.position.x is > 4 or < -4)
+            {
+                transform.localScale  = new Vector2(transform.localScale.x * -1f, 1f);
+                swimSpeed = -swimSpeed;
+            }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (!_hooked)
+        {
+            _rigidbody2D.linearVelocityX = swimSpeed;
+            _rigidbody2D.position = new Vector2(_rigidbody2D.position.x, _startPosition);  
+        }
+        else
+        {
+            _rigidbody2D.linearVelocity = Vector2.zero;
         }
     }
 
