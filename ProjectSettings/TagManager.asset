@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 3
   tags:
   - Fishable
+  - Hook
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Hook
   - Water
   - UI
-  - 
+  - Fishable
   - 
   - 
   - 

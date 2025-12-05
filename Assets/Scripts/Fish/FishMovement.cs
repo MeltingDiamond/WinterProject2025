@@ -6,15 +6,17 @@ public class FishMovement : MonoBehaviour
     public float swimSpeed = 5;
     private float _startPosition;
     private bool _hooked = false;
+    private bool _fished = false;
     
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _startPosition = transform.position.y;
-        if (transform.localScale.x == 1f)
+        if (transform.localScale.x > 0f)
         {
             swimSpeed = -swimSpeed;
         }
+        _rigidbody2D.includeLayers = LayerMask.GetMask("Hook");
     }
 
     void Update()
@@ -32,12 +34,17 @@ public class FishMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!_hooked)
+        if (!_hooked && !_fished)
         {
             _rigidbody2D.linearVelocityX = swimSpeed;
             _rigidbody2D.position = new Vector2(_rigidbody2D.position.x, _startPosition);  
         }
-        else
+        else if (!_hooked && _fished)
+        {
+            _rigidbody2D.linearVelocity = Vector2.zero;
+            transform.position = Vector3.MoveTowards(transform.position, new Vector2(0f, 3f), 2f);
+        }
+        else if (_hooked)
         {
             _rigidbody2D.linearVelocity = Vector2.zero;
         }
@@ -49,7 +56,14 @@ public class FishMovement : MonoBehaviour
         {
             transform.Rotate(0, 0, -90f);
             _rigidbody2D.angularVelocity = 0;
+            _rigidbody2D.excludeLayers = -1;
         }
         _hooked = true;
+    }
+    
+    public void UnhookAndCollect()
+    {
+        _fished = true;
+        _hooked = false;
     }
 }
