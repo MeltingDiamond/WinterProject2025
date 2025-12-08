@@ -128,30 +128,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 71894298}
-  - component: {fileID: 71894297}
   - component: {fileID: 71894299}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &71894297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 71894296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4f1ae5227bc6cc8483c51c87b3141b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  zone1bg: {fileID: 216071419}
-  zone2bg: {fileID: 221258280}
-  zone3bg: {fileID: 1249161356}
 --- !u!4 &71894298
 Transform:
   m_ObjectHideFlags: 0
@@ -386,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 221258280}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.21, y: -18, z: 0}
+  m_LocalPosition: {x: 0.21, y: -17.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -511,15 +495,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2feac102ee41b6674824fb648f3a005e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishSpawner
+  maxAmountInZone1: 15
+  zone1bg: {fileID: 216071419}
   zone1FishPrefabs:
-  - {fileID: 0}
-  maxAmountInZone1: 0
+  - {fileID: 4417513988244240573, guid: 9bb1ea0e10ead311fba06e24d11b5da6, type: 3}
+  - {fileID: 4417513988244240573, guid: 237a7939cd9099007a357db942480e4a, type: 3}
+  - {fileID: 4417513988244240573, guid: f91d51a27ada91b37badb2ec79e7ec5c, type: 3}
+  maxAmountInZone2: 10
+  zone2bg: {fileID: 1249161356}
   zone2FishPrefabs:
-  - {fileID: 8593025718144905452, guid: fe09050fb64351ecca9dc0b048f7fce9, type: 3}
-  maxAmountInZone2: 0
+  - {fileID: 4417513988244240573, guid: be6ca762e539932a4b3b3be75f7eb919, type: 3}
+  maxAmountInZone3: 5
+  zone3bg: {fileID: 221258280}
   zone3FishPrefabs:
-  - {fileID: 8593025718144905452, guid: fe09050fb64351ecca9dc0b048f7fce9, type: 3}
-  maxAmountInZone3: 0
+  - {fileID: 4417513988244240573, guid: fe09050fb64351ecca9dc0b048f7fce9, type: 3}
+  - {fileID: 4417513988244240573, guid: 7dc78aa2b79b81e419f2f469140f9a48, type: 3}
 --- !u!4 &624724113
 Transform:
   m_ObjectHideFlags: 0
@@ -571,7 +561,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishingHookMovement
   camera: {fileID: 1763869198}
-  gameManager: {fileID: 71894297}
   crank: {fileID: 450005755}
   crankDetector: {fileID: 203927396}
 --- !u!50 &877129962
@@ -683,7 +672,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1084,7 +1073,7 @@ Transform:
   m_GameObject: {fileID: 1249161356}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -10.36, z: 0}
+  m_LocalPosition: {x: -0, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1560,5 +1549,5 @@ SceneRoots:
   - {fileID: 953955291}
   - {fileID: 1985173604}
   - {fileID: 216071421}
-  - {fileID: 221258282}
   - {fileID: 1249161358}
+  - {fileID: 221258282}

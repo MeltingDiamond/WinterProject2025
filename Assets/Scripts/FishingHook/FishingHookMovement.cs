@@ -18,7 +18,6 @@ public class FishingHookMovement : MonoBehaviour
     private bool _canDrop = false;
     
     public new Camera camera;
-    public GameManager gameManager;
     public GameObject crank;
     public GameObject crankDetector;
     
@@ -38,6 +37,15 @@ public class FishingHookMovement : MonoBehaviour
 
     private void Update()
     {
+        if (_canDropHookTimer > 0)
+        {
+            _canDropHookTimer -= Time.deltaTime;
+        }
+        else
+        {
+            _canDrop = true;
+        }
+        
         // Drop the hook on touching the screen
         if (_input.isTouchingScreen && _canDrop)
         {
@@ -47,15 +55,6 @@ public class FishingHookMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if (_canDropHookTimer > 0)
-        {
-            _canDropHookTimer -= Time.deltaTime;
-        }
-        else
-        {
-            _canDrop = true;
-        }
-
         if (_dropped)
         {
             // Hook is dropped, but not hooked into anything.

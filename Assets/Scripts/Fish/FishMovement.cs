@@ -42,7 +42,7 @@ public class FishMovement : MonoBehaviour
         else if (!_hooked && _fished)
         {
             _rigidbody2D.linearVelocity = Vector2.zero;
-            transform.position = Vector3.MoveTowards(transform.position, new Vector2(0f, 3f), 2f);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector2(0f, 3f), 1f);
         }
         else if (_hooked)
         {
@@ -65,5 +65,6 @@ public class FishMovement : MonoBehaviour
     {
         _fished = true;
         _hooked = false;
+        Destroy(gameObject, 2f);
     }
 }
