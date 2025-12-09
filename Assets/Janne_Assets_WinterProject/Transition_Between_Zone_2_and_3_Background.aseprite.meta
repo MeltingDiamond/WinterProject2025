@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b14613530499b2742a08e78bd2bba550
+guid: b83defb3c42852940a5deeb9b02a7f7a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,7 +127,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: yeah
+  - name: Transition_Between_Zone_2_and_3_Background
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 16
-      height: 3
-    spriteID: 98f9c2f3002d7b04f9e86bdb2c5114ea
+      width: 270
+      height: 487
+    spriteID: 9ad17d95fadbab141bb5672a9a484cd9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1810623621
+      value0: 1160086467
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: yeah
+    name: Transition_Between_Zone_2_and_3_Background
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: yeah
+    - name: Transition_Between_Zone_2_and_3_Background
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 16
-        height: 3
-      spriteId: 98f9c2f3002d7b04f9e86bdb2c5114ea
+        width: 270
+        height: 487
+      spriteId: 9ad17d95fadbab141bb5672a9a484cd9
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 16, y: 3}
-  previousTextureSize: {x: 32, y: 16}
+  canvasSize: {x: 270, y: 480}
+  previousTextureSize: {x: 512, y: 512}
