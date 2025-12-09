@@ -18,7 +18,6 @@ public class FishingHookMovement : MonoBehaviour
     private bool _canDrop = false;
     
     public new Camera camera;
-    public GameObject crank;
     public GameObject crankDetector;
     
     private void Start()
@@ -76,7 +75,6 @@ public class FishingHookMovement : MonoBehaviour
                 var screenToWorldPos = camera.ScreenToWorldPoint(_input.touchPosition);
                 crankDetector.transform.position = camera.transform.position;
                 crankDetector.transform.rotation = Quaternion.Euler(0f, 0f, 0f) * Quaternion.AngleAxis(GetTheAngle(crankDetector.transform.position, screenToWorldPos), Vector3.forward);
-                crank.transform.rotation = crankDetector.transform.rotation;
                 
                 _rigidbody2D.linearVelocityY = 0;
                 // Take the touch position and point the crank detector towards it 

@@ -20,6 +20,11 @@ public class FishSpawner : MonoBehaviour
     private List<GameObject> _zone3Spawns =  new List<GameObject>();
     public List<GameObject> zone3FishPrefabs;
 
+    public float zone1Start;
+    public float zone2Start;
+    public float zone3Start;
+    public float oceanFloor;
+
     void Start()
     {
     }
@@ -37,24 +42,21 @@ public class FishSpawner : MonoBehaviour
     {
         if ((_zone1Spawns.Count < maxAmountInZone1))
         {
-            var corners = GetSpriteCorners(zone1bg.GetComponent<SpriteRenderer>());
-            var fish = Instantiate(zone1FishPrefabs[ChooseFishToSpawn(zone1FishPrefabs)], GenerateRandomSpawnPos(corners[1], corners[3]), Quaternion.identity);
+            var fish = Instantiate(zone1FishPrefabs[ChooseFishToSpawn(zone1FishPrefabs)], GenerateRandomSpawnPos(new Vector2(-3, zone1Start), new Vector2(3, zone2Start)), Quaternion.identity);
             _zone1Spawns.Add(fish);
             print(fish.name);
         }
         
         if ((_zone2Spawns.Count < maxAmountInZone2))
         {
-            var corners = GetSpriteCorners(zone2bg.GetComponent<SpriteRenderer>());
-            var fish = Instantiate(zone2FishPrefabs[ChooseFishToSpawn(zone2FishPrefabs)], GenerateRandomSpawnPos(corners[1], corners[3]), Quaternion.identity);
+            var fish = Instantiate(zone2FishPrefabs[ChooseFishToSpawn(zone2FishPrefabs)], GenerateRandomSpawnPos(new Vector2(-3, zone2Start), new Vector2(3, zone3Start)), Quaternion.identity);
             _zone2Spawns.Add(fish);
             print(fish.name);
         }
         
         if ((_zone3Spawns.Count < maxAmountInZone3))
         {
-            var corners = GetSpriteCorners(zone3bg.GetComponent<SpriteRenderer>());
-            var fish = Instantiate(zone3FishPrefabs[ChooseFishToSpawn(zone3FishPrefabs)], GenerateRandomSpawnPos(corners[1], corners[3]), Quaternion.identity);
+            var fish = Instantiate(zone3FishPrefabs[ChooseFishToSpawn(zone3FishPrefabs)], GenerateRandomSpawnPos(new Vector2(-3, zone3Start), new Vector2(3, oceanFloor)), Quaternion.identity);
             _zone3Spawns.Add(fish);
             print(fish.name);
         }
@@ -70,5 +72,14 @@ public class FishSpawner : MonoBehaviour
     {
         int choice = Random.Range( 0, list.Count);
         return choice;
+    }
+    
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawLine(new Vector2(-3, zone1Start),  new Vector2(3, zone1Start));
+        Gizmos.DrawLine(new Vector2(-3, zone2Start),  new Vector2(3, zone2Start));
+        Gizmos.DrawLine(new Vector2(-3, zone3Start),  new Vector2(3, zone3Start));
+        Gizmos.DrawLine(new Vector2(-3, oceanFloor),  new Vector2(3, oceanFloor));
     }
 }
