@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8152c252cf1fc224584754e9daa9f9bd
+guid: 1bed5c59ba06f934e92962b646610ed0
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: bgsketch
+  - name: UI_Catalogue_Title
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.490991, y: -2.0754716}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 270
-      height: 2880
-    spriteID: c12cb5417882d7740a0a3ced9e1a6d73
+      width: 222
+      height: 53
+    spriteID: 6d82a53b234c28d46a5300b9892dc6b9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1365679579
+      value0: 1298066335
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: bgsketch
+    name: UI_Catalogue_Title
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: bgsketch
+    - name: UI_Catalogue_Title
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 270
-        height: 2880
-      spriteId: c12cb5417882d7740a0a3ced9e1a6d73
+        x: 19
+        y: 110
+        width: 222
+        height: 53
+      spriteId: 6d82a53b234c28d46a5300b9892dc6b9
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 270, y: 2880}
-  previousTextureSize: {x: 512, y: 4096}
+  canvasSize: {x: 256, y: 256}
+  previousTextureSize: {x: 256, y: 64}
