@@ -6,24 +6,60 @@
   <component name="ChangeListManager">
     <list default="true" id="7ed556b8-2bbe-4bc6-8b68-972231b2e4e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WinterProject2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WinterProject2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Zone_1_Repeating_Background.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Zone_1_Repeating_Background.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Zone_2_Repeating_Background.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Zone_2_Repeating_Background.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Zone_3_Repeating_Background.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Zone_3_Repeating_Background.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_FishHook.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_FishHook.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_clownfish_zone01 sprite.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_clownfish_zone01 sprite.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_please markus god.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_please markus god.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_zone01-Salmon.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_zone01-Salmon.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_zone01_Triggerfish.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_zone01_Triggerfish.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_zone01_wrasse.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_zone01_wrasse.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/AnglerFish_Zone3.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/AnglerFish_Zone3.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/JellyFish_Zone3.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/JellyFish_Zone3.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/RibbonEel.Zone2.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/RibbonEel.Zone2.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/SeaHorse_Zone1.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/SeaHorse_Zone1.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/SeaSlug_Zone1.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/SeaSlug_Zone1.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Transition_Between_Zone_1_and_2_Background.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Transition_Between_Zone_1_and_2_Background.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Coelacanth_Zone2 - Copy.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Coelacanth_Zone2 - Copy.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Flyndre_Zone1 - Copy.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Flyndre_Zone1 - Copy.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Helicoprion_Zone3 - Copy.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Helicoprion_Zone3 - Copy.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Humuhumunukunukuapuaa_Zone1 - Copy.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Humuhumunukunukuapuaa_Zone1 - Copy.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Sunfish_Zone2 - Copy.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Sunfish_Zone2 - Copy.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Threshershark_Zone3 - Copy.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Threshershark_Zone3 - Copy.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Threshershark_Zone3.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mike_Assets_WinterProject/Threshershark_Zone3.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFabs/Core.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFabs/Core/DemoPlayer.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFabs/Core/DemoPlayer.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Flyndre_Zone1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Flyndre_Zone1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Humuhumunukunukuapuaa_Zone1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Humuhumunukunukuapuaa_Zone1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Moonjellyfish_Zone1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Moonjellyfish_Zone1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Salmon_zone01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Salmon_zone01.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/SeaHorse_Zone1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/SeaHorse_Zone1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone2/Coelacanth_Zone2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone2/Coelacanth_Zone2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AdrianTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AdrianTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DistanceUpdater.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DistanceUpdater.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fish/FishMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fish/FishMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fish/FishSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fish/FishSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishingHook/FishingHookMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishingHook/FishingHookMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone2/Sunfish_Zone2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone2/Sunfish_Zone2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/AnglerFish_Zone3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/AnglerFish_Zone3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/Helicoprion_Zone3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/Helicoprion_Zone3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/JellyFish_Zone3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/JellyFish_Zone3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/Threshershark_Zone3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/Threshershark_Zone3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_FishHook.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_FishHook.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_bubbles.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_bubbles.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_clownfish_zone01 sprite.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_clownfish_zone01 sprite.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_maine menu_you caight a fish.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_maine menu_you caight a fish.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_zone01_Diamond.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_zone01_Diamond.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_zone01_Triggerfish.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_zone01_Triggerfish.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_zone01_wrasse.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite_zone01_wrasse.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Mermaid_Zone2.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Mermaid_Zone2.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Moonjellyfish_Zone1.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Moonjellyfish_Zone1.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Octopus_Zone3.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Octopus_Zone3.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Siren_Zone3.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Siren_Zone3.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Turtle_Zone1.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Turtle_Zone1.aseprite.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,22 +86,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Fish-Spawning&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "Game",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/6000.2.7f2/Editor/Unity" />
