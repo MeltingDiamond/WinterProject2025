@@ -30,6 +30,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Fish/FishSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FishingHook/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/CreditsController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -123,6 +124,7 @@
       <workItem from="1764842707487" duration="1353000" />
       <workItem from="1765114029534" duration="100000" />
       <workItem from="1765184233703" duration="2682000" />
+      <workItem from="1765359190528" duration="738000" />
     </task>
     <servers />
   </component>
