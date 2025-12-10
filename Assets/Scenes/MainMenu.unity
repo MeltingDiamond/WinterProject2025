@@ -715,6 +715,7 @@ GameObject:
   - component: {fileID: 1318168641}
   - component: {fileID: 1318168643}
   - component: {fileID: 1318168642}
+  - component: {fileID: 1318168644}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -729,7 +730,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318168640}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -779,6 +780,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318168640}
   m_CullTransparentMesh: 1
+--- !u!111 &1318168644
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318168640}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: -1482168594967909941, guid: a61fb2d938b5e6449b8c087c8d9fa8cc, type: 3}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &1743951630
 GameObject:
   m_ObjectHideFlags: 0
