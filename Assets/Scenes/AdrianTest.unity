@@ -165,37 +165,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DistanceUpdater
   muhText: {fileID: 1182337799}
   fishingHook: {fileID: 877129965}
---- !u!1 &100210840
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 100210841}
-  m_Layer: 0
-  m_Name: Zone3SpawnArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &100210841
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100210840}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26493, y: -6.33677, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &203927396
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +280,7 @@ Transform:
   m_GameObject: {fileID: 216071419}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.505, z: 0}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -401,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 221258280}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.21, y: -17.5, z: 0}
+  m_LocalPosition: {x: 0, y: -30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -439,22 +408,28 @@ MonoBehaviour:
   maxAmountInZone1: 12
   zone1bg: {fileID: 216071419}
   zone1FishPrefabs:
-  - {fileID: 4417513988244240573, guid: 9bb1ea0e10ead311fba06e24d11b5da6, type: 3}
   - {fileID: 4417513988244240573, guid: 237a7939cd9099007a357db942480e4a, type: 3}
+  - {fileID: 4417513988244240573, guid: ae868cb6b40780831a8d2cc74bea70cb, type: 3}
   - {fileID: 4417513988244240573, guid: f91d51a27ada91b37badb2ec79e7ec5c, type: 3}
+  - {fileID: 4417513988244240573, guid: 378b4739089c9e82b93dc0ab032333d6, type: 3}
+  - {fileID: 4417513988244240573, guid: 9bb1ea0e10ead311fba06e24d11b5da6, type: 3}
   maxAmountInZone2: 9
   zone2bg: {fileID: 1249161356}
   zone2FishPrefabs:
   - {fileID: 4417513988244240573, guid: be6ca762e539932a4b3b3be75f7eb919, type: 3}
+  - {fileID: 4417513988244240573, guid: 88e0351ed254997ea87bfeab90f9de89, type: 3}
   maxAmountInZone3: 6
   zone3bg: {fileID: 221258280}
   zone3FishPrefabs:
   - {fileID: 4417513988244240573, guid: fe09050fb64351ecca9dc0b048f7fce9, type: 3}
+  - {fileID: 4417513988244240573, guid: fbb87b87919d2a3f3800e2548b64c726, type: 3}
   - {fileID: 4417513988244240573, guid: 7dc78aa2b79b81e419f2f469140f9a48, type: 3}
-  zone1Start: 5
-  zone2Start: -2.5
-  zone3Start: -10
-  oceanFloor: -170.5
+  - {fileID: 4417513988244240573, guid: 222dc0e14d041d0ac88adb6fbe92630d, type: 3}
+  zone1Start: -5
+  zone2Start: -15
+  zone3Start: -25
+  oceanFloor: -35
+  allFishPrefabs: []
 --- !u!4 &624724113
 Transform:
   m_ObjectHideFlags: 0
@@ -507,6 +482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishingHookMovement
   camera: {fileID: 1763869198}
   crankDetector: {fileID: 203927396}
+  fishSpawner: {fileID: 624724112}
 --- !u!50 &877129962
 Rigidbody2D:
   serializedVersion: 5
@@ -797,37 +773,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &963185672
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 963185673}
-  m_Layer: 0
-  m_Name: Zone1SpawnArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &963185673
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963185672}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26493, y: -6.33677, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1182337797
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,7 +807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -47.179, y: 166}
+  m_AnchoredPosition: {x: -172.6, y: 383.8}
   m_SizeDelta: {x: 94.3589, y: 28.0879}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1182337799
@@ -1048,7 +993,7 @@ Transform:
   m_GameObject: {fileID: 1249161356}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -10, z: 0}
+  m_LocalPosition: {x: 0, y: -20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1156,37 +1101,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1576837887
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1576837888}
-  m_Layer: 0
-  m_Name: Zone2SpawnArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1576837888
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1576837887}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26493, y: -6.33677, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1763869196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1164,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1433,6 +1347,3 @@ SceneRoots:
   - {fileID: 216071421}
   - {fileID: 1249161358}
   - {fileID: 221258282}
-  - {fileID: 963185673}
-  - {fileID: 1576837888}
-  - {fileID: 100210841}

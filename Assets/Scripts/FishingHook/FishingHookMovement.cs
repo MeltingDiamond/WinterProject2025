@@ -19,6 +19,7 @@ public class FishingHookMovement : MonoBehaviour
     
     public new Camera camera;
     public GameObject crankDetector;
+    public FishSpawner fishSpawner;
     
     private void Start()
     {
@@ -56,13 +57,17 @@ public class FishingHookMovement : MonoBehaviour
     {
         if (_dropped)
         {
+            if (transform.position.y < fishSpawner.oceanFloor)
+            {
+                _isHooked =  true;
+            }
             // Hook is dropped, but not hooked into anything.
             if (!_isHooked)
             {
+                _rigidbody2D.linearVelocityY = -_dropSpeed;
                 _rigidbody2D.excludeLayers = 0;
                 // Camera follows the hook and hook drops slowly down
                 _cameraControls.followHook = true;
-                _rigidbody2D.linearVelocityY = -_dropSpeed;
                 _rigidbody2D.position = new Vector2(camera.ScreenToWorldPoint(_input.touchPosition).x, _rigidbody2D.position.y);
             }
             // Hook is dropped and it is hooked into something
@@ -71,36 +76,23 @@ public class FishingHookMovement : MonoBehaviour
                 // Camera returns to the top of the screen, and you rotate in a circle to reel in the hook
                 _cameraControls.followHook = true;
                 _rigidbody2D.excludeLayers = -1;
-                // Rotate a crank on the fishing rod to reel in the hook
-                var screenToWorldPos = camera.ScreenToWorldPoint(_input.touchPosition);
-                crankDetector.transform.position = camera.transform.position;
-                crankDetector.transform.rotation = Quaternion.Euler(0f, 0f, 0f) * Quaternion.AngleAxis(GetTheAngle(crankDetector.transform.position, screenToWorldPos), Vector3.forward);
-                
-                _rigidbody2D.linearVelocityY = 0;
-                // Take the touch position and point the crank detector towards it 
-                var crankDetectorCurrentRotation = crankDetector.transform.rotation.eulerAngles;
-                
-                var deltaAngle = Mathf.DeltaAngle(_oldCrankDetectorZRotation, crankDetectorCurrentRotation.z);
-                
-                if (deltaAngle > 0.3f)
-                {
-                    // Move the hook upwards
-                    _rigidbody2D.position = new Vector2(transform.position.x, transform.position.y + 0.3f);
-                }
-                //if (deltaAngle < -1f)
-                //{
-                    // If we need to move in both directions
-                //    _rigidbody2D.position = new Vector2(transform.position.x, transform.position.y - 1);
-                //}
-                _oldCrankDetectorZRotation = crankDetectorCurrentRotation.z;
 
                 if (transform.position.y > 1f)
                 {
-                    print("You collected a " + _hookedFish.gameObject.name);
                     _joint2D.connectedBody = null;
                     _joint2D.enabled = false;
-                    _hookedFishScript.UnhookAndCollect();
+                    if (_hookedFish != null && _hookedFishScript)
+                    {
+                        print("You collected a " + _hookedFish.gameObject.name);
+                        fishSpawner.RemoveFish(_hookedFish.gameObject);
+                        _hookedFishScript.UnhookAndCollect();
+                    }
                     Reset();
+                    _rigidbody2D.linearVelocityY = 0;
+                }
+                else
+                {
+                    ReelWithCrank();
                 }
             }
         }
@@ -118,6 +110,35 @@ public class FishingHookMovement : MonoBehaviour
         _hookedFishScript = null;
     }
 
+    private void ReelWithCrank()
+    {
+        // Rotate a crank on the fishing rod to reel in the hook
+        var screenToWorldPos = camera.ScreenToWorldPoint(_input.touchPosition);
+        crankDetector.transform.position = camera.transform.position;
+        crankDetector.transform.rotation = Quaternion.Euler(0f, 0f, 0f) * Quaternion.AngleAxis(GetTheAngle(crankDetector.transform.position, screenToWorldPos), Vector3.forward);
+        
+        // Take the touch position and point the crank detector towards it 
+        var crankDetectorCurrentRotation = crankDetector.transform.rotation.eulerAngles;
+                
+        var deltaAngle = Mathf.DeltaAngle(_oldCrankDetectorZRotation, crankDetectorCurrentRotation.z);
+                
+        if (deltaAngle > 0.1f)
+        {
+            // Move the hook upwards
+            _rigidbody2D.linearVelocityY = _dropSpeed;
+        }
+        else
+        {
+            _rigidbody2D.linearVelocityY = 0;
+        }
+        //if (deltaAngle < -1f)
+        //{
+        // If we need to move in both directions
+        //    _rigidbody2D.position = new Vector2(transform.position.x, transform.position.y - 1);
+        //}
+        _oldCrankDetectorZRotation = crankDetectorCurrentRotation.z;
+    }
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // If you collide with something fishable hook it, you can only hook once

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4044790187802893271}
   - component: {fileID: 3575567208999280133}
   m_Layer: 6
-  m_Name: Coelacanth_Zone2
+  m_Name: Sunfish_Zone2
   m_TagString: Fishable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 277513969586912181, guid: e74f63e994e7e404db06c33dac41328e, type: 3}
+  m_Sprite: {fileID: -6308323449116302854, guid: 3917c7d627b7ae0428082d9432c4893b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishMovement
   swimSpeed: 1
-  facingLeft: 1
+  facingLeft: 0
 --- !u!95 &3575567208999280133
 Animator:
   serializedVersion: 7
@@ -182,7 +182,7 @@ Animator:
   m_GameObject: {fileID: 4417513988244240573}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 7429637866579216040, guid: e74f63e994e7e404db06c33dac41328e, type: 3}
+  m_Controller: {fileID: 9201382868032934268, guid: 3917c7d627b7ae0428082d9432c4893b, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishMovement
   swimSpeed: 1
+  facingLeft: 1
 --- !u!95 &3575567208999280133
 Animator:
   serializedVersion: 7
