@@ -26,11 +26,6 @@ public class FishMovement : MonoBehaviour
             transform.localScale  = new Vector2(transform.localScale.x * -1f, 1f);
             swimSpeed = -swimSpeed;
         }
-
-        if (random == 2)
-        {
-            print("The random is king 2");
-        }
     }
 
     private void FixedUpdate()
@@ -60,7 +55,14 @@ public class FishMovement : MonoBehaviour
     {
         if (!_hooked)
         {
-            //transform.Rotate(0, 0, -90f);
+            //if (facingLeft)
+            //{
+              //  transform.Rotate(0, 0, 90f);
+            //}
+            //else
+            //{
+              //  transform.Rotate(0, 0, -90f);
+            //}
             _rigidbody2D.angularVelocity = 0;
             _rigidbody2D.excludeLayers = -1;
         }
