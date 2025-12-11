@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b14613530499b2742a08e78bd2bba550
+guid: e1a8498cb1f54ed47a063257957cda6d
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: yeah
+  - name: UI_Catalogue_Exit
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.45833334, y: -0.95652175}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 16
-      height: 3
-    spriteID: 8f0680cee605f124cb951c134378c3e4
+      width: 24
+      height: 23
+    spriteID: d0eb070bd9583b546bbcc3b9b973d6c9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -147,31 +147,31 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: -9, y: -18}
   spriteSheetImportData: []
   tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1810623621
+      value0: 3686656483
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: yeah
+    name: UI_Catalogue_Exit
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: yeah
+    - name: UI_Catalogue_Exit
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 8
         y: 0
-        width: 16
-        height: 3
-      spriteId: 8f0680cee605f124cb951c134378c3e4
+        width: 59
+        height: 63
+      spriteId: d0eb070bd9583b546bbcc3b9b973d6c9
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 16, y: 3}
-  previousTextureSize: {x: 32, y: 16}
+  canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 32, y: 32}
