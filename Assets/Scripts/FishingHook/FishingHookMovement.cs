@@ -11,6 +11,7 @@ public class FishingHookMovement : MonoBehaviour
     private FishMovement _hookedFishScript;
     private RelativeJoint2D _joint2D;
     private bool _isHooked = false;
+    private float _reelSpeed = 20;
     private float _dropSpeed = 5;
     private bool _dropped = false;
     private float _oldCrankDetectorZRotation;
@@ -125,7 +126,7 @@ public class FishingHookMovement : MonoBehaviour
         if (deltaAngle > 0.1f)
         {
             // Move the hook upwards
-            _rigidbody2D.linearVelocityY = _dropSpeed;
+            _rigidbody2D.linearVelocityY = _reelSpeed + Mathf.Min(Mathf.Abs(transform.position.y), 15);
         }
         else
         {

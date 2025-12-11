@@ -12,10 +12,14 @@ public class FishSpawner : MonoBehaviour
     private List<GameObject> _zone1Spawns = new List<GameObject>();
     public List<GameObject> zone1FishPrefabs;
     
+    public GameObject zone1TransitionBG;
+    
     public int maxAmountInZone2;
     public GameObject zone2bg;
     private List<GameObject> _zone2Spawns = new List<GameObject>();
     public List<GameObject> zone2FishPrefabs;
+    
+    public GameObject zone2TransitionBG;
     
     public int maxAmountInZone3;
     public GameObject zone3bg;
@@ -33,7 +37,15 @@ public class FishSpawner : MonoBehaviour
     {
         zone0bg.transform.position = new Vector2(0, zone1Start);
         zone1bg.transform.position = new Vector2(0, zone2Start);
+
+        var zone2bgSize= zone2bg.GetComponent<SpriteRenderer>().size;
+        zone1TransitionBG.transform.position = new Vector2(0, zone3Start + zone2bgSize.y);
+        
         zone2bg.transform.position = new Vector2(0, zone3Start);
+        
+        var zone3bgSize= zone3bg.GetComponent<SpriteRenderer>().size;
+        zone2TransitionBG.transform.position = new Vector2(0, oceanFloor + zone3bgSize.y);
+        
         zone3bg.transform.position = new Vector2(0, oceanFloor);
         allFishPrefabs = new List<GameObject>(zone1FishPrefabs.Count +
                                               zone2FishPrefabs.Count +

@@ -32,7 +32,7 @@ public class FishMovement : MonoBehaviour
     {
         if (!_hooked && !_fished)
         {
-            if (_rigidbody2D.position.x is > 4 or < -4)
+            if (_rigidbody2D.position.x is > 3.5f or < -3.5f)
             {
                 transform.localScale  = new Vector2(transform.localScale.x * -1f, 1f);
                 swimSpeed = -swimSpeed;
