@@ -5,6 +5,8 @@ using Random = UnityEngine.Random;
 
 public class FishSpawner : MonoBehaviour
 {
+    public GameObject zone0bg;
+    
     public int maxAmountInZone1;
     public GameObject zone1bg;
     private List<GameObject> _zone1Spawns = new List<GameObject>();
@@ -29,6 +31,7 @@ public class FishSpawner : MonoBehaviour
 
     void Start()
     {
+        zone0bg.transform.position = new Vector2(0, zone1Start);
         zone1bg.transform.position = new Vector2(0, zone2Start);
         zone2bg.transform.position = new Vector2(0, zone3Start);
         zone3bg.transform.position = new Vector2(0, oceanFloor);

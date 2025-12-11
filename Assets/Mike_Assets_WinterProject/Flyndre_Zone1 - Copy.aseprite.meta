@@ -76,7 +76,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 1
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 5
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -91,7 +91,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 1
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 5
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639009717016844010
+  platformSettingsDirtyTick: 639010487961493490
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -130,7 +130,7 @@ ScriptedImporter:
   - name: Flyndre_Zone1 - Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
-    alignment: 7
+    alignment: 5
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
