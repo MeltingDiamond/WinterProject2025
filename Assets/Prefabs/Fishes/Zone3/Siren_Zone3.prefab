@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4044790187802893271}
   - component: {fileID: 3575567208999280133}
   m_Layer: 6
-  m_Name: Threshershark_Zone3
+  m_Name: Siren_Zone3
   m_TagString: Fishable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 4189008383036379176, guid: 64b8cf6043af2ff4385738f5bc4af886, type: 3}
+  m_Sprite: {fileID: 1233058740178105876, guid: 990d3f220b8ac2b4baa6a7e9ebda1f6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -129,17 +129,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.953125, y: 0}
+  m_Offset: {x: 0.703125, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 1, y: 0.5}
-    oldSize: {x: 1.90625, y: 0.96875}
+    pivot: {x: 0, y: 0.5}
+    oldSize: {x: 1.40625, y: 0.515625}
     newSize: {x: 0.15, y: 0.27}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.90625, y: 0.96875}
+  m_Size: {x: 1.40625, y: 0.515625}
   m_EdgeRadius: 0
 --- !u!50 &1329066396588752478
 Rigidbody2D:
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishMovement
   swimSpeed: 1
-  facingLeft: 0
+  facingLeft: 1
 --- !u!95 &3575567208999280133
 Animator:
   serializedVersion: 7
@@ -192,7 +192,7 @@ Animator:
   m_GameObject: {fileID: 4417513988244240573}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -921380399121649934, guid: 64b8cf6043af2ff4385738f5bc4af886, type: 3}
+  m_Controller: {fileID: -8288296928294192874, guid: 990d3f220b8ac2b4baa6a7e9ebda1f6d, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
