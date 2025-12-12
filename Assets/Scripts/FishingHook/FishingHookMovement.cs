@@ -115,6 +115,7 @@ public class FishingHookMovement : MonoBehaviour
         _cameraControls.followHook = false;
         _hookedFish = null;
         _hookedFishScript = null;
+        _crankDetectorSprite.enabled = false;
     }
 
     private void ReelWithCrank()
