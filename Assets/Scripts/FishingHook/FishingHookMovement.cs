@@ -17,9 +17,11 @@ public class FishingHookMovement : MonoBehaviour
     private float _oldCrankDetectorZRotation;
     private float _canDropHookTimer = 0f;
     private bool _canDrop = false;
+    private SpriteRenderer _crankDetectorSprite;
     
     public new Camera camera;
     public GameObject crankDetector;
+    public Sprite spinSprite;
     public FishSpawner fishSpawner;
     
     private void Start()
@@ -30,6 +32,9 @@ public class FishingHookMovement : MonoBehaviour
         _joint2D = GetComponent<RelativeJoint2D>();
         _joint2D.enabled = false;
         _cameraControls = camera.GetComponent<CameraControls>();
+        _crankDetectorSprite = crankDetector.GetComponent<SpriteRenderer>();
+        
+        _crankDetectorSprite.enabled = false;
         
         // Center crank rotator in the center of the screen.
         crankDetector.transform.position = new Vector2();
@@ -65,6 +70,7 @@ public class FishingHookMovement : MonoBehaviour
             // Hook is dropped, but not hooked into anything.
             if (!_isHooked)
             {
+                _crankDetectorSprite.enabled = false;
                 _rigidbody2D.linearVelocityY = -_dropSpeed;
                 _rigidbody2D.excludeLayers = 0;
                 // Camera follows the hook and hook drops slowly down
@@ -114,8 +120,9 @@ public class FishingHookMovement : MonoBehaviour
     private void ReelWithCrank()
     {
         // Rotate a crank on the fishing rod to reel in the hook
+        _crankDetectorSprite.enabled = true;
         var screenToWorldPos = camera.ScreenToWorldPoint(_input.touchPosition);
-        crankDetector.transform.position = camera.transform.position;
+        crankDetector.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y, crankDetector.transform.position.z);
         crankDetector.transform.rotation = Quaternion.Euler(0f, 0f, 0f) * Quaternion.AngleAxis(GetTheAngle(crankDetector.transform.position, screenToWorldPos), Vector3.forward);
         
         // Take the touch position and point the crank detector towards it 
