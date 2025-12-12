@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 41570969}
   - component: {fileID: 41570968}
-  - component: {fileID: 41570967}
+  - component: {fileID: 41570970}
   - component: {fileID: 41570966}
   - component: {fileID: 41570965}
   - component: {fileID: 41570964}
@@ -237,42 +237,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &41570967
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41570961}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.2
 --- !u!212 &41570968
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -346,6 +310,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &41570970
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41570961}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.375, y: 0.25}
+    newSize: {x: 0.24, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.375, y: 0.25}
+  m_EdgeRadius: 0
 --- !u!1 &223492015
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2feac102ee41b6674824fb648f3a005e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishSpawner
+  camera: {fileID: 519420031}
   zone0bg: {fileID: 223492015}
   maxAmountInZone1: 14
   zone1bg: {fileID: 680085744}
@@ -1004,9 +1015,6 @@ MonoBehaviour:
   - {fileID: 4417513988244240573, guid: d18347a864a36de999e34cffa116ad33, type: 3}
   - {fileID: 4417513988244240573, guid: d497f3ae91fc7b3f6be4781561de9445, type: 3}
   - {fileID: 4417513988244240573, guid: 222dc0e14d041d0ac88adb6fbe92630d, type: 3}
-  zone1Start: -5
-  zone2Start: -20
-  zone3Start: -35
   oceanFloor: -50
   allFishPrefabs: []
 --- !u!4 &1016467436

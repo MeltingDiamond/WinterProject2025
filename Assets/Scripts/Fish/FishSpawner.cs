@@ -1,10 +1,10 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class FishSpawner : MonoBehaviour
 {
+    public Camera camera;
     public GameObject zone0bg;
     
     public int maxAmountInZone1;
@@ -26,27 +26,36 @@ public class FishSpawner : MonoBehaviour
     private List<GameObject> _zone3Spawns = new List<GameObject>();
     public List<GameObject> zone3FishPrefabs;
 
-    public float zone1Start;
-    public float zone2Start;
-    public float zone3Start;
-    public float oceanFloor;
+    private float _zone1Start;
+    private float _zone2Start;
+    private float _zone3Start;
+    [HideInInspector] public float oceanFloor;
     
     public List<GameObject> allFishPrefabs;
 
     void Start()
     {
-        zone0bg.transform.position = new Vector2(0, zone1Start);
-        zone1bg.transform.position = new Vector2(0, zone2Start);
-
+        var zone0bgSize = zone0bg.GetComponent<SpriteRenderer>().size;
+        var zone1bgSize= zone1bg.GetComponent<SpriteRenderer>().size;
+        var zone1TransitionBGSize= zone1TransitionBG.GetComponent<SpriteRenderer>().size;
         var zone2bgSize= zone2bg.GetComponent<SpriteRenderer>().size;
-        zone1TransitionBG.transform.position = new Vector2(0, zone3Start + zone2bgSize.y);
-        
-        zone2bg.transform.position = new Vector2(0, zone3Start);
-        
+        var zone2TransitionBGSize= zone2TransitionBG.GetComponent<SpriteRenderer>().size;
         var zone3bgSize= zone3bg.GetComponent<SpriteRenderer>().size;
-        zone2TransitionBG.transform.position = new Vector2(0, oceanFloor + zone3bgSize.y);
         
-        zone3bg.transform.position = new Vector2(0, oceanFloor);
+        zone0bg.transform.position = new Vector2(0, camera.transform.position.y -  zone0bgSize.y);
+        zone1bg.transform.position = new Vector2(0, zone0bg.transform.position.y - zone1bgSize.y);
+        
+        zone1TransitionBG.transform.position = new Vector2(0, zone1bg.transform.position.y - zone1TransitionBGSize.y);
+        zone2bg.transform.position = new Vector2(0, zone1TransitionBG.transform.position.y - zone2bgSize.y);
+        
+        zone2TransitionBG.transform.position = new Vector2(0, zone2bg.transform.position.y - zone2TransitionBGSize.y);
+        zone3bg.transform.position = new Vector2(0, zone2TransitionBG.transform.position.y - zone3bgSize.y);
+
+        _zone1Start = zone0bg.transform.position.y + zone0bgSize.y / 2;
+        _zone2Start = zone1TransitionBG.transform.position.y + zone1TransitionBGSize.y/2;
+        _zone3Start = zone2TransitionBG.transform.position.y + zone2TransitionBGSize.y/2;
+        oceanFloor = zone3bg.transform.position.y;
+            
         allFishPrefabs = new List<GameObject>(zone1FishPrefabs.Count +
                                               zone2FishPrefabs.Count +
                                               zone3FishPrefabs.Count);
@@ -68,19 +77,19 @@ public class FishSpawner : MonoBehaviour
     {
         if ((_zone1Spawns.Count < maxAmountInZone1))
         {
-            var fish = Instantiate(zone1FishPrefabs[ChooseFishToSpawn(zone1FishPrefabs)], GenerateRandomSpawnPos(new Vector2(-3, zone1Start), new Vector2(3, zone2Start)), Quaternion.identity);
+            var fish = Instantiate(zone1FishPrefabs[ChooseFishToSpawn(zone1FishPrefabs)], GenerateRandomSpawnPos(new Vector2(-3, _zone1Start), new Vector2(3, _zone2Start)), Quaternion.identity);
             _zone1Spawns.Add(fish);
         }
         
         if ((_zone2Spawns.Count < maxAmountInZone2))
         {
-            var fish = Instantiate(zone2FishPrefabs[ChooseFishToSpawn(zone2FishPrefabs)], GenerateRandomSpawnPos(new Vector2(-3, zone2Start), new Vector2(3, zone3Start)), Quaternion.identity);
+            var fish = Instantiate(zone2FishPrefabs[ChooseFishToSpawn(zone2FishPrefabs)], GenerateRandomSpawnPos(new Vector2(-3, _zone2Start), new Vector2(3, _zone3Start)), Quaternion.identity);
             _zone2Spawns.Add(fish);
         }
         
         if ((_zone3Spawns.Count < maxAmountInZone3))
         {
-            var fish = Instantiate(zone3FishPrefabs[ChooseFishToSpawn(zone3FishPrefabs)], GenerateRandomSpawnPos(new Vector2(-3, zone3Start), new Vector2(3, oceanFloor)), Quaternion.identity);
+            var fish = Instantiate(zone3FishPrefabs[ChooseFishToSpawn(zone3FishPrefabs)], GenerateRandomSpawnPos(new Vector2(-3, _zone3Start), new Vector2(3, oceanFloor)), Quaternion.identity);
             _zone3Spawns.Add(fish);
         }
     }
@@ -114,14 +123,5 @@ public class FishSpawner : MonoBehaviour
             //_zone3SpawnedFishNumber--;
             _zone3Spawns.Remove(fish);
         }
-    }
-    
-    public void OnDrawGizmos()
-    {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawLine(new Vector2(-3, zone1Start),  new Vector2(3, zone1Start));
-        Gizmos.DrawLine(new Vector2(-3, zone2Start),  new Vector2(3, zone2Start));
-        Gizmos.DrawLine(new Vector2(-3, zone3Start),  new Vector2(3, zone3Start));
-        Gizmos.DrawLine(new Vector2(-3, oceanFloor),  new Vector2(3, oceanFloor));
     }
 }
