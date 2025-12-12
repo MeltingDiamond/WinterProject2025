@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2feac102ee41b6674824fb648f3a005e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishSpawner
+  zone0bg: {fileID: 0}
   maxAmountInZone1: 0
   zone1bg: {fileID: 4417513988244240573, guid: 237a7939cd9099007a357db942480e4a, type: 3}
   zone1FishPrefabs:

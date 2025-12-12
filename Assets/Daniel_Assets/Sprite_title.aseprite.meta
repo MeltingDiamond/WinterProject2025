@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Sprites/UI_Catalogue_Title.aseprite.meta
 guid: 369cb7e3eb105974d80d15afcad7fb21
-========
-guid: bfe18677fa598404b99ef9913c6d3bc4
->>>>>>>> main:Assets/Daniel_Assets/Sprite_title.aseprite.meta
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,15 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-<<<<<<<< HEAD:Assets/Sprites/UI_Catalogue_Title.aseprite.meta
-  - name: UI_Catalogue_Title
-    originalName: 
-    pivot: {x: 0.490991, y: -2.0754716}
-========
   - name: Sprite_title
     originalName: 
     pivot: {x: 0.48245615, y: -3.315315}
->>>>>>>> main:Assets/Daniel_Assets/Sprite_title.aseprite.meta
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -147,15 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-<<<<<<<< HEAD:Assets/Sprites/UI_Catalogue_Title.aseprite.meta
-      width: 222
-      height: 53
-    spriteID: 305b6725c03d46e4392206da5e659a57
-========
       width: 228
       height: 111
-    spriteID: 2775715690feab94595ff10737331b37
->>>>>>>> main:Assets/Daniel_Assets/Sprite_title.aseprite.meta
+    spriteID: 2432c04a338641446b8a5c27abce73b8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -169,35 +153,16 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-<<<<<<<< HEAD:Assets/Sprites/UI_Catalogue_Title.aseprite.meta
-      value0: 1298066335
-========
       value0: 2551598326
->>>>>>>> main:Assets/Daniel_Assets/Sprite_title.aseprite.meta
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-<<<<<<<< HEAD:Assets/Sprites/UI_Catalogue_Title.aseprite.meta
-    name: UI_Catalogue_Title
-========
     name: Sprite_title
->>>>>>>> main:Assets/Daniel_Assets/Sprite_title.aseprite.meta
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-<<<<<<<< HEAD:Assets/Sprites/UI_Catalogue_Title.aseprite.meta
-    - name: UI_Catalogue_Title
-      frameIndex: 0
-      additiveSortOrder: 0
-      cellRect:
-        x: 19
-        y: 110
-        width: 222
-        height: 53
-      spriteId: 305b6725c03d46e4392206da5e659a57
-========
     - name: Sprite_title
       frameIndex: 0
       additiveSortOrder: 0
@@ -206,8 +171,7 @@ ScriptedImporter:
         y: 368
         width: 228
         height: 111
-      spriteId: 2775715690feab94595ff10737331b37
->>>>>>>> main:Assets/Daniel_Assets/Sprite_title.aseprite.meta
+      spriteId: 2432c04a338641446b8a5c27abce73b8
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -217,10 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-<<<<<<<< HEAD:Assets/Sprites/UI_Catalogue_Title.aseprite.meta
-  canvasSize: {x: 256, y: 256}
-  previousTextureSize: {x: 256, y: 64}
-========
   canvasSize: {x: 270, y: 480}
   previousTextureSize: {x: 256, y: 128}
->>>>>>>> main:Assets/Daniel_Assets/Sprite_title.aseprite.meta
