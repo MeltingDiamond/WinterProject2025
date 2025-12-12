@@ -134,7 +134,7 @@ public class FishingHookMovement : MonoBehaviour
         if (deltaAngle > 0.1f)
         {
             // Move the hook upwards
-            _rigidbody2D.linearVelocityY = _reelSpeed + Mathf.Min(Mathf.Abs(transform.position.y), 15);
+            _rigidbody2D.linearVelocityY = _reelSpeed + Mathf.Min(Mathf.Abs(transform.position.y), 10);
         }
         else
         {
