@@ -971,6 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2feac102ee41b6674824fb648f3a005e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishSpawner
+  camera: {fileID: 519420031}
   zone0bg: {fileID: 223492015}
   maxAmountInZone1: 14
   zone1bg: {fileID: 680085744}
@@ -1004,9 +1005,6 @@ MonoBehaviour:
   - {fileID: 4417513988244240573, guid: d18347a864a36de999e34cffa116ad33, type: 3}
   - {fileID: 4417513988244240573, guid: d497f3ae91fc7b3f6be4781561de9445, type: 3}
   - {fileID: 4417513988244240573, guid: 222dc0e14d041d0ac88adb6fbe92630d, type: 3}
-  zone1Start: -5
-  zone2Start: -20
-  zone3Start: -35
   oceanFloor: -50
   allFishPrefabs: []
 --- !u!4 &1016467436
