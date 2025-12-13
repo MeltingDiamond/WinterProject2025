@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FishingHookMovement : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class FishingHookMovement : MonoBehaviour
     public GameObject crankDetector;
     public Sprite spinSprite;
     public FishSpawner fishSpawner;
+    public Image coughtFishImage;
     
     private void Start()
     {
@@ -39,6 +41,8 @@ public class FishingHookMovement : MonoBehaviour
         // Center crank rotator in the center of the screen.
         crankDetector.transform.position = new Vector2();
         _oldCrankDetectorZRotation = crankDetector.transform.rotation.eulerAngles.z;
+        
+        coughtFishImage.enabled = false;
     }
 
     private void Update()
@@ -50,6 +54,7 @@ public class FishingHookMovement : MonoBehaviour
         else
         {
             _canDrop = true;
+            coughtFishImage.enabled = false;
         }
         
         // Drop the hook on touching the screen
@@ -93,6 +98,7 @@ public class FishingHookMovement : MonoBehaviour
                         print("You collected a " + _hookedFish.gameObject.name);
                         fishSpawner.RemoveFish(_hookedFish.gameObject);
                         _hookedFishScript.UnhookAndCollect();
+                        coughtFishImage.enabled = true;
                     }
                     Reset();
                     _rigidbody2D.linearVelocityY = 0;
@@ -110,7 +116,7 @@ public class FishingHookMovement : MonoBehaviour
         // Resets the fishing hook variables back to how it is at the start of the game
         _isHooked = false;
         _dropped = false;
-        _canDropHookTimer = 0.5f;
+        _canDropHookTimer = 1f;
         _canDrop = false;
         _cameraControls.followHook = false;
         _hookedFish = null;

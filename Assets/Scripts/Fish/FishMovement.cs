@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FishMovement : MonoBehaviour
 {
@@ -73,6 +74,6 @@ public class FishMovement : MonoBehaviour
     {
         _fished = true;
         _hooked = false;
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 1f);
     }
 }
