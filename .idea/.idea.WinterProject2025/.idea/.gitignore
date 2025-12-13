@@ -2,6 +2,10 @@
 /shelf/
 /workspace.xml
 # Rider ignored files
+/modules.xml
+/contentModel.xml
+/.idea.WinterProject2025.iml
+/projectSettingsUpdater.xml
 /.idea.WinterProject2025.iml
 /projectSettingsUpdater.xml
 /modules.xml
