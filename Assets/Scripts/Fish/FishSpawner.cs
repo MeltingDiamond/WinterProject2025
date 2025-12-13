@@ -26,6 +26,8 @@ public class FishSpawner : MonoBehaviour
     private List<GameObject> _zone3Spawns = new List<GameObject>();
     public List<GameObject> zone3FishPrefabs;
 
+    public GameObject oceanFloorbg;
+
     private float _zone1Start;
     private float _zone2Start;
     private float _zone3Start;
@@ -50,11 +52,12 @@ public class FishSpawner : MonoBehaviour
         
         zone2TransitionBG.transform.position = new Vector2(0, zone2bg.transform.position.y - zone2bgSize.y);
         zone3bg.transform.position = new Vector2(0, zone2TransitionBG.transform.position.y - zone3bgSize.y);
+        oceanFloorbg.transform.position = new Vector2(0, zone3bg.transform.position.y - zone3bgSize.y);
 
         _zone1Start = zone0bg.transform.position.y;
         _zone2Start = zone1TransitionBG.transform.position.y + zone1TransitionBGSize.y/2;
         _zone3Start = zone2TransitionBG.transform.position.y + zone2TransitionBGSize.y/2;
-        oceanFloor = zone3bg.transform.position.y;
+        oceanFloor = oceanFloorbg.transform.position.y;
             
         allFishPrefabs = new List<GameObject>(zone1FishPrefabs.Count +
                                               zone2FishPrefabs.Count +
