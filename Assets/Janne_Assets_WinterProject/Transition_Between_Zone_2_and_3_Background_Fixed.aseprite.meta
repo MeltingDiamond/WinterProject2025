@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b83defb3c42852940a5deeb9b02a7f7a
+guid: ece4e10bb28af2f0d9881f83e37da61f
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639010606433722270
+  platformSettingsDirtyTick: 639011464242801780
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -127,7 +127,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Transition_Between_Zone_2_and_3_Background
+  - name: Transition_Between_Zone_2_and_3_Background_Fixed
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 7
@@ -138,8 +138,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 270
-      height: 487
-    spriteID: 9ad17d95fadbab141bb5672a9a484cd9
+      height: 480
+    spriteID: 68bcc93ab1c555980a1c7b14c0fb8fa0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1160086467
+      value0: 1478414628
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Transition_Between_Zone_2_and_3_Background
+    name: Transition_Between_Zone_2_and_3_Background_Fixed
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Transition_Between_Zone_2_and_3_Background
+    - name: Transition_Between_Zone_2_and_3_Background_Fixed
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 270
-        height: 487
-      spriteId: 9ad17d95fadbab141bb5672a9a484cd9
+        height: 480
+      spriteId: 68bcc93ab1c555980a1c7b14c0fb8fa0
     linkedCells: []
     tileCells: []
     tileSetIndex: 0

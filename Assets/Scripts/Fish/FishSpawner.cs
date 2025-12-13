@@ -41,17 +41,17 @@ public class FishSpawner : MonoBehaviour
         var zone2bgSize= zone2bg.GetComponent<SpriteRenderer>().size;
         var zone2TransitionBGSize= zone2TransitionBG.GetComponent<SpriteRenderer>().size;
         var zone3bgSize= zone3bg.GetComponent<SpriteRenderer>().size;
-        
-        zone0bg.transform.position = new Vector2(0, camera.transform.position.y -  zone0bgSize.y);
+
+        zone0bg.transform.position = new Vector2(0, camera.transform.position.y - zone0bgSize.y / 2);
         zone1bg.transform.position = new Vector2(0, zone0bg.transform.position.y - zone1bgSize.y);
-        
-        zone1TransitionBG.transform.position = new Vector2(0, zone1bg.transform.position.y - zone1TransitionBGSize.y);
+
+        zone1TransitionBG.transform.position = new Vector2(0, zone1bg.transform.position.y - zone1bgSize.y);
         zone2bg.transform.position = new Vector2(0, zone1TransitionBG.transform.position.y - zone2bgSize.y);
         
-        zone2TransitionBG.transform.position = new Vector2(0, zone2bg.transform.position.y - zone2TransitionBGSize.y);
+        zone2TransitionBG.transform.position = new Vector2(0, zone2bg.transform.position.y - zone2bgSize.y);
         zone3bg.transform.position = new Vector2(0, zone2TransitionBG.transform.position.y - zone3bgSize.y);
 
-        _zone1Start = zone0bg.transform.position.y + zone0bgSize.y / 2;
+        _zone1Start = zone0bg.transform.position.y;
         _zone2Start = zone1TransitionBG.transform.position.y + zone1TransitionBGSize.y/2;
         _zone3Start = zone2TransitionBG.transform.position.y + zone2TransitionBGSize.y/2;
         oceanFloor = zone3bg.transform.position.y;

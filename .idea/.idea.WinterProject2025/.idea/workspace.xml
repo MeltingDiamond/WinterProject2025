@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7ed556b8-2bbe-4bc6-8b68-972231b2e4e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WinterProject2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WinterProject2025/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Transition_Between_Surface_and_Zone_1_Background.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Transition_Between_Surface_and_Zone_1_Background.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Transition_Between_Zone_1_and_2_Background.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Transition_Between_Zone_1_and_2_Background.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Transition_Between_Zone_2_and_3_Background.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Janne_Assets_WinterProject/Transition_Between_Zone_2_and_3_Background.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fish/FishSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fish/FishSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Spin to pull.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Spin to pull.aseprite.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Background",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
