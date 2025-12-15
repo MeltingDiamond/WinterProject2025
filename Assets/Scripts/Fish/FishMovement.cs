@@ -4,20 +4,24 @@ using UnityEngine.UI;
 public class FishMovement : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
-    public float swimSpeed = 5;
-    public bool facingLeft;
     private float _startPosition;
     private bool _hooked = false;
     private bool _fished = false;
+    
+    public float swimSpeed = 5;
+    public bool facingLeft;
     
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _startPosition = transform.position.y;
+        
+        // Makes sure the fish swims the way it is facing
         if (facingLeft)
         {
             swimSpeed = -swimSpeed;
         }
+        // Only collide with the hook
         _rigidbody2D.includeLayers = LayerMask.GetMask("Hook");
         
         // Choose a random swimming direction when fish is spawned
@@ -31,6 +35,7 @@ public class FishMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Fish is not hooked and is free swimming
         if (!_hooked && !_fished)
         {
             if (_rigidbody2D.position.x is > 3.5f or < -3.5f)
@@ -41,35 +46,31 @@ public class FishMovement : MonoBehaviour
             _rigidbody2D.linearVelocityX = swimSpeed;
             _rigidbody2D.position = new Vector2(_rigidbody2D.position.x, _startPosition);
         }
+        // The fish has been fished up and is now getting collected
         else if (!_hooked && _fished)
         {
             _rigidbody2D.linearVelocity = Vector2.zero;
             transform.position = Vector3.MoveTowards(transform.position, new Vector2(0f, 3f), 1f);
         }
+        // The fish is on the fishing hook
         else if (_hooked)
         {
             _rigidbody2D.linearVelocity = Vector2.zero;
         }
     }
-
+    
+    // Sets the fish in hooked mode
     public void GetHooked(Transform hook)
     {
         if (!_hooked)
         {
-            //if (facingLeft)
-            //{
-              //  transform.Rotate(0, 0, 90f);
-            //}
-            //else
-            //{
-              //  transform.Rotate(0, 0, -90f);
-            //}
             _rigidbody2D.angularVelocity = 0;
             _rigidbody2D.excludeLayers = -1;
         }
         _hooked = true;
     }
     
+    // Sets the fish in collect mode
     public void UnhookAndCollect()
     {
         _fished = true;

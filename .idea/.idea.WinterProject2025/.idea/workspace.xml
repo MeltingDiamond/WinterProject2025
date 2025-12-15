@@ -6,31 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7ed556b8-2bbe-4bc6-8b68-972231b2e4e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WinterProject2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WinterProject2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_maine menu_you caight a fish.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Daniel_Assets/Sprite_maine menu_you caight a fish.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Flyndre_Zone1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Flyndre_Zone1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Humuhumunukunukuapuaa_Zone1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Humuhumunukunukuapuaa_Zone1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Moonjellyfish_Zone1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Moonjellyfish_Zone1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Salmon_zone01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Salmon_zone01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/SeaHorse_Zone1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/SeaHorse_Zone1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/SeaSlug_Zone1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/SeaSlug_Zone1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Triggerfish_zone01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Triggerfish_zone01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Turtle_Zone1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/Turtle_Zone1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/clownfish_zone01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/clownfish_zone01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/please markus god_zone1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/please markus god_zone1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/wrasse_zone01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone1/wrasse_zone01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone2/Coelacanth_Zone2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone2/Coelacanth_Zone2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone2/Mermaid_Zone2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone2/Mermaid_Zone2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone2/RibbonEel.Zone2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone2/RibbonEel.Zone2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone2/Sunfish_Zone2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone2/Sunfish_Zone2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/AnglerFish_Zone3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/AnglerFish_Zone3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/Helicoprion_Zone3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/Helicoprion_Zone3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/JellyFish_Zone3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/JellyFish_Zone3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/Octopus_Zone3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/Octopus_Zone3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/Siren_Zone3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/Siren_Zone3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/Threshershark_Zone3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fishes/Zone3/Threshershark_Zone3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControls.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fish/FishMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fish/FishMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fish/FishSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fish/FishSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishingHook/FishingHookMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishingHook/FishingHookMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/DistanceUpdater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/DistanceUpdater.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Commenting",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -150,6 +130,7 @@
       <workItem from="1765447344527" duration="4045000" />
       <workItem from="1765533471980" duration="619000" />
       <workItem from="1765624776957" duration="759000" />
+      <workItem from="1765791954814" duration="1480000" />
     </task>
     <servers />
   </component>
