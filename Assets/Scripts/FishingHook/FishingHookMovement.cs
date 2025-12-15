@@ -6,14 +6,13 @@ public class FishingHookMovement : MonoBehaviour
 {
     private InputManager _input;
     private Rigidbody2D _rigidbody2D;
-    private Collider2D _collider2D;
     private CameraControls _cameraControls;
     private Collision2D _hookedFish;
     private FishMovement _hookedFishScript;
     private RelativeJoint2D _joint2D;
     private bool _isHooked = false;
-    private float _reelSpeed = 20;
-    private float _dropSpeed = 5;
+    public float reelSpeed = 20;
+    public float dropSpeed = 5;
     private bool _dropped = false;
     private float _oldCrankDetectorZRotation;
     private float _canDropHookTimer = 0f;
@@ -30,7 +29,6 @@ public class FishingHookMovement : MonoBehaviour
     {
         _input = GetComponent<InputManager>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _collider2D = GetComponent<Collider2D>();
         _joint2D = GetComponent<RelativeJoint2D>();
         _joint2D.enabled = false;
         _cameraControls = camera.GetComponent<CameraControls>();
@@ -47,6 +45,7 @@ public class FishingHookMovement : MonoBehaviour
 
     private void Update()
     {
+        // Timer that delays when you can drop the hook giving time to lift your finger
         if (_canDropHookTimer > 0)
         {
             _canDropHookTimer -= Time.deltaTime;
@@ -66,8 +65,9 @@ public class FishingHookMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if (_dropped)
+        if (_dropped) // True when hook is dropped
         {
+            // Makes sure the hook hooks the sea floor
             if (transform.position.y < fishSpawner.oceanFloor)
             {
                 _isHooked =  true;
@@ -76,7 +76,7 @@ public class FishingHookMovement : MonoBehaviour
             if (!_isHooked)
             {
                 _crankDetectorSprite.enabled = false;
-                _rigidbody2D.linearVelocityY = -_dropSpeed;
+                _rigidbody2D.linearVelocityY = -dropSpeed;
                 _rigidbody2D.excludeLayers = 0;
                 // Camera follows the hook and hook drops slowly down
                 _cameraControls.followHook = true;
@@ -85,26 +85,30 @@ public class FishingHookMovement : MonoBehaviour
             // Hook is dropped and it is hooked into something
             else
             {
-                // Camera returns to the top of the screen, and you rotate in a circle to reel in the hook
+                // You rotate in a circle around the center of the screen to reel in the hook
                 _cameraControls.followHook = true;
                 _rigidbody2D.excludeLayers = -1;
-
+                
+                // The hook reaches the top of the screen and you collect the fish
                 if (transform.position.y > 1f)
                 {
                     _joint2D.connectedBody = null;
                     _joint2D.enabled = false;
                     if (_hookedFish != null && _hookedFishScript)
                     {
+                        // There was a fish on the hook, you now collect it
                         print("You collected a " + _hookedFish.gameObject.name);
                         fishSpawner.RemoveFish(_hookedFish.gameObject);
                         _hookedFishScript.UnhookAndCollect();
                         coughtFishImage.enabled = true;
                     }
+                    // Reset so you can drop the hook again
                     Reset();
                     _rigidbody2D.linearVelocityY = 0;
                 }
                 else
                 {
+                    // Spin to reel inn hook
                     ReelWithCrank();
                 }
             }
@@ -126,7 +130,7 @@ public class FishingHookMovement : MonoBehaviour
 
     private void ReelWithCrank()
     {
-        // Rotate a crank on the fishing rod to reel in the hook
+        // Rotate a crank in the center of the screen to reel in the hook
         _crankDetectorSprite.enabled = true;
         var screenToWorldPos = camera.ScreenToWorldPoint(_input.touchPosition);
         crankDetector.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y, crankDetector.transform.position.z);
@@ -136,21 +140,17 @@ public class FishingHookMovement : MonoBehaviour
         var crankDetectorCurrentRotation = crankDetector.transform.rotation.eulerAngles;
                 
         var deltaAngle = Mathf.DeltaAngle(_oldCrankDetectorZRotation, crankDetectorCurrentRotation.z);
-                
+         
+        // If you are moving fast enough the hook reels in
         if (deltaAngle > 0.1f)
         {
             // Move the hook upwards
-            _rigidbody2D.linearVelocityY = _reelSpeed + Mathf.Min(Mathf.Abs(transform.position.y), 10);
+            _rigidbody2D.linearVelocityY = reelSpeed + Mathf.Min(Mathf.Abs(transform.position.y), 10);
         }
         else
         {
             _rigidbody2D.linearVelocityY = 0;
         }
-        //if (deltaAngle < -1f)
-        //{
-        // If we need to move in both directions
-        //    _rigidbody2D.position = new Vector2(transform.position.x, transform.position.y - 1);
-        //}
         _oldCrankDetectorZRotation = crankDetectorCurrentRotation.z;
     }
     

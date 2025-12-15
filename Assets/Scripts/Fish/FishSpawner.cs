@@ -5,24 +5,24 @@ using Random = UnityEngine.Random;
 public class FishSpawner : MonoBehaviour
 {
     public Camera camera;
-    public GameObject zone0bg;
+    public GameObject zone0bg; // Top most background
     
     public int maxAmountInZone1;
-    public GameObject zone1bg;
+    public GameObject zone1bg; // 2nd background
     private List<GameObject> _zone1Spawns = new List<GameObject>();
     public List<GameObject> zone1FishPrefabs;
     
-    public GameObject zone1TransitionBG;
+    public GameObject zone1TransitionBG; // 3rd background
     
     public int maxAmountInZone2;
-    public GameObject zone2bg;
+    public GameObject zone2bg; // 4th background
     private List<GameObject> _zone2Spawns = new List<GameObject>();
     public List<GameObject> zone2FishPrefabs;
     
-    public GameObject zone2TransitionBG;
+    public GameObject zone2TransitionBG; // 5th background
     
     public int maxAmountInZone3;
-    public GameObject zone3bg;
+    public GameObject zone3bg; // bottom most background
     private List<GameObject> _zone3Spawns = new List<GameObject>();
     public List<GameObject> zone3FishPrefabs;
 
@@ -31,17 +31,20 @@ public class FishSpawner : MonoBehaviour
     private float _zone3Start;
     [HideInInspector] public float oceanFloor;
     
+    // List containing game objects of all fishes that can spawn
     public List<GameObject> allFishPrefabs;
 
     void Start()
     {
+        // Get size of backgrounds to use later
         var zone0bgSize = zone0bg.GetComponent<SpriteRenderer>().size;
         var zone1bgSize= zone1bg.GetComponent<SpriteRenderer>().size;
         var zone1TransitionBGSize= zone1TransitionBG.GetComponent<SpriteRenderer>().size;
         var zone2bgSize= zone2bg.GetComponent<SpriteRenderer>().size;
         var zone2TransitionBGSize= zone2TransitionBG.GetComponent<SpriteRenderer>().size;
         var zone3bgSize= zone3bg.GetComponent<SpriteRenderer>().size;
-
+        
+        // Position backgrounds under one another
         zone0bg.transform.position = new Vector2(0, camera.transform.position.y - zone0bgSize.y / 2);
         zone1bg.transform.position = new Vector2(0, zone0bg.transform.position.y - zone1bgSize.y);
 
@@ -50,12 +53,14 @@ public class FishSpawner : MonoBehaviour
         
         zone2TransitionBG.transform.position = new Vector2(0, zone2bg.transform.position.y - zone2bgSize.y);
         zone3bg.transform.position = new Vector2(0, zone2TransitionBG.transform.position.y - zone3bgSize.y);
-
+        
+        // Get where each zone starts and where the sea floor is
         _zone1Start = zone0bg.transform.position.y;
         _zone2Start = zone1TransitionBG.transform.position.y + zone1TransitionBGSize.y/2;
         _zone3Start = zone2TransitionBG.transform.position.y + zone2TransitionBGSize.y/2;
         oceanFloor = zone3bg.transform.position.y;
-            
+        
+        // Generate a list of all fishes that can spawn for use in the collectable script
         allFishPrefabs = new List<GameObject>(zone1FishPrefabs.Count +
                                               zone2FishPrefabs.Count +
                                               zone3FishPrefabs.Count);
@@ -64,17 +69,9 @@ public class FishSpawner : MonoBehaviour
         allFishPrefabs.AddRange(zone3FishPrefabs);
     }
     
-    private static Vector3[] GetSpriteCorners(SpriteRenderer renderer)
-    {
-        Vector3 topRight = renderer.transform.TransformPoint(renderer.sprite.bounds.max);
-        Vector3 topLeft = renderer.transform.TransformPoint(new Vector3(renderer.sprite.bounds.max.x, renderer.sprite.bounds.min.y, 0));
-        Vector3 botLeft = renderer.transform.TransformPoint(renderer.sprite.bounds.min);
-        Vector3 botRight = renderer.transform.TransformPoint(new Vector3(renderer.sprite.bounds.min.x, renderer.sprite.bounds.max.y, 0));
-        return new Vector3[] { topRight, topLeft, botLeft, botRight };
-    }
-    
     private void FixedUpdate()
     {
+        // Spawns fishes if there are less than max amount of fishes in the zone
         if ((_zone1Spawns.Count < maxAmountInZone1))
         {
             var fish = Instantiate(zone1FishPrefabs[ChooseFishToSpawn(zone1FishPrefabs)], GenerateRandomSpawnPos(new Vector2(-3, _zone1Start), new Vector2(3, _zone2Start)), Quaternion.identity);
@@ -94,18 +91,22 @@ public class FishSpawner : MonoBehaviour
         }
     }
 
+    // Generate a position within a specified area
     private Vector3 GenerateRandomSpawnPos(Vector3 topLeftCorner, Vector3 bottomRightCorner)
     {
         var x = Random.Range(bottomRightCorner.x, topLeftCorner.x);
         var y = Random.Range(bottomRightCorner.y, topLeftCorner.y);
         return new Vector3(x, y, 0);
     }
+    
+    // Gets a random item from a list
     private int ChooseFishToSpawn(List<GameObject> list)
     {
         int choice = Random.Range( 0, list.Count);
         return choice;
     }
-
+    
+    // Used to remove a fish from the spawned fish lists when it gets deleted so new can spawn
     public void RemoveFish(GameObject fish)
     {
         if (fish.name.Contains("1"))
