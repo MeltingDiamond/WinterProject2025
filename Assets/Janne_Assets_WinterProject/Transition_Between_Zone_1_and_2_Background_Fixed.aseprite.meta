@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f1ffbb4fb029a5dee89a2c574d5b99db
+guid: e6f3055f89eba7a6b901b6f6772b1c4c
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -76,7 +76,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 1
-    defaultPivotAlignment: 0
+    defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -91,7 +91,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 1
-    defaultPivotAlignment: 0
+    defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639011466796883640
+  platformSettingsDirtyTick: 639011463497633080
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -127,19 +127,19 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Spin to pull
+  - name: Transition_Between_Zone_1_and_2_Background_Fixed
     originalName: 
     pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 54
-      height: 59
-    spriteID: 3824aad165100fb51bb519ddb0ff12cc
+      width: 270
+      height: 480
+    spriteID: f74a51d5fb2e7803da6a8a9115e7b414
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 3191137434
+      value0: 3486994054
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Spin to pull
+    name: Transition_Between_Zone_1_and_2_Background_Fixed
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Spin to pull
+    - name: Transition_Between_Zone_1_and_2_Background_Fixed
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 5
+        x: 0
         y: 0
-        width: 54
-        height: 59
-      spriteId: 3824aad165100fb51bb519ddb0ff12cc
+        width: 270
+        height: 480
+      spriteId: f74a51d5fb2e7803da6a8a9115e7b414
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -229,5 +229,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
-  previousTextureSize: {x: 64, y: 128}
+  canvasSize: {x: 270, y: 480}
+  previousTextureSize: {x: 512, y: 512}
