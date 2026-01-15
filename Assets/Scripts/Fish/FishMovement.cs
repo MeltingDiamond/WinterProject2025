@@ -49,7 +49,7 @@ public class FishMovement : MonoBehaviour
         else if (!_hooked && _fished)
         {
             _rigidbody2D.linearVelocity = Vector2.zero;
-            transform.position = Vector3.MoveTowards(transform.position, new Vector2(0f, 3f), 1f);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector2(0f, 3.8f), 1f);
         }
         // The fish is on the fishing hook
         else if (_hooked)
