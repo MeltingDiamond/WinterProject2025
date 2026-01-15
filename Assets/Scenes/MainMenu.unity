@@ -338,6 +338,46 @@ Transform:
 --- !u!1001 &272109075
 PrefabInstance:
   m_ObjectHideFlags: 0
+<<<<<<< Updated upstream
+=======
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 87517300}
+  - component: {fileID: 87517299}
+  - component: {fileID: 87517301}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &87517299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87517298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f8a22fddb24c5fb96ee7d5f45acfb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  masterMixer: {fileID: 24100000, guid: 5697945f4157914c583e317900512aa2, type: 2}
+  masterMixerGroup: {fileID: 24300002, guid: 5697945f4157914c583e317900512aa2, type: 2}
+  backgroundMusic: {fileID: 94536802}
+--- !u!4 &87517300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87517298}
+>>>>>>> Stashed changes
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
