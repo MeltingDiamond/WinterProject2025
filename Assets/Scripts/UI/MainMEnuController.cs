@@ -10,7 +10,7 @@ public class FishButtonController : MonoBehaviour
 
     public void OnCollectionClisk()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Catalogue");
     }
 
     public void OnCreditsClick()
