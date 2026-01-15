@@ -5,12 +5,12 @@ public class FishButtonController : MonoBehaviour
 {
     public void OnFishClick()
     {
-        SceneManager.LoadScene("AdrianTest");
+        SceneManager.LoadScene("Game");
     }
 
     public void OnCollectionClisk()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Catalogue");
     }
 
     public void OnCreditsClick()

@@ -1,11 +1,11 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FishingHookMovement : MonoBehaviour
 {
     private InputManager _input;
     private Rigidbody2D _rigidbody2D;
-    private Collider2D _collider2D;
     private CameraControls _cameraControls;
     private Collision2D _hookedFish;
     private FishMovement _hookedFishScript;
@@ -18,38 +18,48 @@ public class FishingHookMovement : MonoBehaviour
     private float _canDropHookTimer = 0f;
     private bool _canDrop = false;
     private SpriteRenderer _crankDetectorSprite;
+    private LineRenderer _fishLine;
     
     public new Camera camera;
     public GameObject crankDetector;
     public Sprite spinSprite;
     public FishSpawner fishSpawner;
+    public Image coughtFishImage;
+    public Transform FishLineAttachPoint;
     
     private void Start()
     {
         _input = GetComponent<InputManager>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _collider2D = GetComponent<Collider2D>();
         _joint2D = GetComponent<RelativeJoint2D>();
         _joint2D.enabled = false;
         _cameraControls = camera.GetComponent<CameraControls>();
         _crankDetectorSprite = crankDetector.GetComponent<SpriteRenderer>();
+        _fishLine  = GetComponent<LineRenderer>();
         
         _crankDetectorSprite.enabled = false;
         
         // Center crank rotator in the center of the screen.
         crankDetector.transform.position = new Vector2();
         _oldCrankDetectorZRotation = crankDetector.transform.rotation.eulerAngles.z;
+        
+        coughtFishImage.enabled = false;
     }
 
     private void Update()
     {
+        DrawFishLine();
         if (_canDropHookTimer > 0)
         {
             _canDropHookTimer -= Time.deltaTime;
         }
         else
         {
-            _canDrop = true;
+            coughtFishImage.enabled = false;
+            if (!_input.isTouchingScreen)
+            {
+                _canDrop = true;
+            }
         }
         
         // Drop the hook on touching the screen
@@ -92,7 +102,8 @@ public class FishingHookMovement : MonoBehaviour
                     {
                         print("You collected a " + _hookedFish.gameObject.name);
                         fishSpawner.RemoveFish(_hookedFish.gameObject);
-                        _hookedFishScript.UnhookAndCollect();
+                        _hookedFishScript.UnhookAndCollect(1.5f);
+                        coughtFishImage.enabled = true;
                     }
                     Reset();
                     _rigidbody2D.linearVelocityY = 0;
@@ -105,12 +116,20 @@ public class FishingHookMovement : MonoBehaviour
         }
     }
 
+    private void DrawFishLine()
+    {
+        var renderPoints = new Vector3[2] {FishLineAttachPoint.position, new Vector3(FishLineAttachPoint.position.x, 5, FishLineAttachPoint.position.z)};
+        _fishLine.widthMultiplier = 1f; //0.05f;
+        _fishLine.positionCount = 2;
+        _fishLine.SetPositions(renderPoints);
+    }
+
     private void Reset()
     {
         // Resets the fishing hook variables back to how it is at the start of the game
         _isHooked = false;
         _dropped = false;
-        _canDropHookTimer = 0.5f;
+        _canDropHookTimer = 1.5f;
         _canDrop = false;
         _cameraControls.followHook = false;
         _hookedFish = null;
@@ -134,7 +153,7 @@ public class FishingHookMovement : MonoBehaviour
         if (deltaAngle > 0.1f)
         {
             // Move the hook upwards
-            _rigidbody2D.linearVelocityY = _reelSpeed + Mathf.Min(Mathf.Abs(transform.position.y), 15);
+            _rigidbody2D.linearVelocityY = _reelSpeed + Mathf.Min(Mathf.Abs(transform.position.y), 10);
         }
         else
         {
