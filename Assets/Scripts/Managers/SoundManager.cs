@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
@@ -19,7 +17,12 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null) instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(transform.gameObject);
+            DontDestroyOnLoad(backgroundMusic);
+        }
         else Destroy(gameObject);
         
         _audioSource = GetComponent<AudioSource>();

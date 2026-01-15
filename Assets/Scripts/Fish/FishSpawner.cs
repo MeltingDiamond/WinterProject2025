@@ -43,9 +43,8 @@ public class FishSpawner : MonoBehaviour
         var zone2bgSize= zone2bg.GetComponent<SpriteRenderer>().size;
         var zone2TransitionBGSize= zone2TransitionBG.GetComponent<SpriteRenderer>().size;
         var zone3bgSize= zone3bg.GetComponent<SpriteRenderer>().size;
-        
-        // Position backgrounds under one another
-        zone0bg.transform.position = new Vector2(0, camera.transform.position.y - zone0bgSize.y / 2);
+
+        zone0bg.transform.position = new Vector2(0, camera.transform.position.y - zone0bgSize.y / 2.2f);
         zone1bg.transform.position = new Vector2(0, zone0bg.transform.position.y - zone1bgSize.y);
 
         zone1TransitionBG.transform.position = new Vector2(0, zone1bg.transform.position.y - zone1bgSize.y);

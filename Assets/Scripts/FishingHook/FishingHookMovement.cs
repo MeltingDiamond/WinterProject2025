@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,12 +17,14 @@ public class FishingHookMovement : MonoBehaviour
     private float _canDropHookTimer = 0f;
     private bool _canDrop = false;
     private SpriteRenderer _crankDetectorSprite;
+    private LineRenderer _fishLine;
     
     public new Camera camera;
     public GameObject crankDetector;
     public Sprite spinSprite;
     public FishSpawner fishSpawner;
     public Image coughtFishImage;
+    public Transform FishLineAttachPoint;
     
     private void Start()
     {
@@ -33,6 +34,7 @@ public class FishingHookMovement : MonoBehaviour
         _joint2D.enabled = false;
         _cameraControls = camera.GetComponent<CameraControls>();
         _crankDetectorSprite = crankDetector.GetComponent<SpriteRenderer>();
+        _fishLine  = GetComponent<LineRenderer>();
         
         _crankDetectorSprite.enabled = false;
         
@@ -45,6 +47,7 @@ public class FishingHookMovement : MonoBehaviour
 
     private void Update()
     {
+        DrawFishLine();
         // Timer that delays when you can drop the hook giving time to lift your finger
         if (_canDropHookTimer > 0)
         {
@@ -52,8 +55,11 @@ public class FishingHookMovement : MonoBehaviour
         }
         else
         {
-            _canDrop = true;
             coughtFishImage.enabled = false;
+            if (!_input.isTouchingScreen)
+            {
+                _canDrop = true;
+            }
         }
         
         // Drop the hook on touching the screen
@@ -99,7 +105,7 @@ public class FishingHookMovement : MonoBehaviour
                         // There was a fish on the hook, you now collect it
                         print("You collected a " + _hookedFish.gameObject.name);
                         fishSpawner.RemoveFish(_hookedFish.gameObject);
-                        _hookedFishScript.UnhookAndCollect();
+                        _hookedFishScript.UnhookAndCollect(1.5f);
                         coughtFishImage.enabled = true;
                     }
                     // Reset so you can drop the hook again
@@ -115,12 +121,20 @@ public class FishingHookMovement : MonoBehaviour
         }
     }
 
+    private void DrawFishLine()
+    {
+        var renderPoints = new Vector3[2] {FishLineAttachPoint.position, new Vector3(FishLineAttachPoint.position.x, 5, FishLineAttachPoint.position.z)};
+        _fishLine.widthMultiplier = 1f; //0.05f;
+        _fishLine.positionCount = 2;
+        _fishLine.SetPositions(renderPoints);
+    }
+
     private void Reset()
     {
         // Resets the fishing hook variables back to how it is at the start of the game
         _isHooked = false;
         _dropped = false;
-        _canDropHookTimer = 1f;
+        _canDropHookTimer = 1.5f;
         _canDrop = false;
         _cameraControls.followHook = false;
         _hookedFish = null;
