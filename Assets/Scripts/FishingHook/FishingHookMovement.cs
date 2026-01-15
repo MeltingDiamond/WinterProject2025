@@ -49,6 +49,7 @@ public class FishingHookMovement : MonoBehaviour
     {
         DrawFishLine();
         // Timer that delays when you can drop the hook giving time to lift your finger
+        DrawFishLine();
         if (_canDropHookTimer > 0)
         {
             _canDropHookTimer -= Time.deltaTime;
