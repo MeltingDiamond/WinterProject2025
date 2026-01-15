@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,8 +11,6 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag("Hook"))
         {
-            // Add to the player's score or inventory
-            GameManager.instance.AddScore(value);
         }
     }
 
