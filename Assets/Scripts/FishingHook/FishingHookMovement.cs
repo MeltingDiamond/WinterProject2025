@@ -21,7 +21,6 @@ public class FishingHookMovement : MonoBehaviour
     
     public new Camera camera;
     public GameObject crankDetector;
-    public Sprite spinSprite;
     public FishSpawner fishSpawner;
     public Image coughtFishImage;
     public Transform FishLineAttachPoint;

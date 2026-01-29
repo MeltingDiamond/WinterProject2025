@@ -4,7 +4,10 @@ using Random = UnityEngine.Random;
 
 public class FishSpawner : MonoBehaviour
 {
-    public Camera camera;
+    public new Camera camera;
+    [SerializeField] private Transform _caughtFishSign;
+    public static Transform CaughtFishSign;
+
     public GameObject zone0bg; // Top most background
     
     public int maxAmountInZone1;
@@ -36,6 +39,7 @@ public class FishSpawner : MonoBehaviour
 
     void Start()
     {
+        CaughtFishSign = _caughtFishSign;
         // Get size of backgrounds to use later
         var zone0bgSize = zone0bg.GetComponent<SpriteRenderer>().size;
         var zone1bgSize= zone1bg.GetComponent<SpriteRenderer>().size;

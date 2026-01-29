@@ -212,7 +212,6 @@ MonoBehaviour:
   dropSpeed: 5
   camera: {fileID: 519420031}
   crankDetector: {fileID: 1664502462}
-  spinSprite: {fileID: -5605247621295754070, guid: f1ffbb4fb029a5dee89a2c574d5b99db, type: 3}
   fishSpawner: {fileID: 1016467435}
   coughtFishImage: {fileID: 465646486}
   FishLineAttachPoint: {fileID: 87861084}
@@ -697,6 +696,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &303704625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303704626}
+  m_Layer: 0
+  m_Name: CaughtFishHookPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &303704626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303704625}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 465646485}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &325082903
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,7 +936,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 303704626}
   m_Father: {fileID: 102773019}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1431,6 +1462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishSpawner
   camera: {fileID: 519420031}
+  _caughtFishSign: {fileID: 303704626}
   zone0bg: {fileID: 223492015}
   maxAmountInZone1: 14
   zone1bg: {fileID: 680085744}
